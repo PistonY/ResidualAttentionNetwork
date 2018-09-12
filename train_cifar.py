@@ -53,7 +53,7 @@ val_data = gluon.data.DataLoader(
     batch_size=batch_size)
 
 
-def test(test_net, ctx, test_loader, epoch):
+def test(test_net, ctx, test_loader, epoch, save_params=True):
     print("Start testing iter %d." % epoch)
     Loss = gloss.SoftmaxCrossEntropyLoss()
     metric = mx.metric.Accuracy()
@@ -68,7 +68,8 @@ def test(test_net, ctx, test_loader, epoch):
 
     _, test_acc = metric.get()
     _, test_loss = test_loss.get()
-    test_net.save_parameters('cifar_param/test_iter%d_%.5f.param' % (epoch, test_acc))
+    if save_params:
+        test_net.save_parameters('cifar_param/test_iter%d_%.5f.param' % (epoch, test_acc))
     test_str = ("\033[35mtest_Loss: %f, test acc %f\033[0m" % (test_loss, test_acc))
     print(test_str)
 
