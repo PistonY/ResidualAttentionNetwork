@@ -6,7 +6,7 @@
 
 from __future__ import absolute_import
 from mxnet.gluon import nn
-from ResidualAttentionNetwork.model.attention_module import *
+from model.attention_module import *
 
 
 class ResidualAttentionModel_448input(nn.HybridBlock):
