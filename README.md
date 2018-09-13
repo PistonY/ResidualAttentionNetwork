@@ -22,11 +22,11 @@ Python3.6, Numpy, mxnet
 For training cifar10, just run train_cifar.py
 
 For only testing cifar10, you can simply run below script.
-```pthon
+```python
 import mxnet as mx
 from mxnet import gluon, image
 from train_cifar import test
-from ResidualAttentionNetwork.model.residual_attention_network import ResidualAttentionModel_92_32input_update
+from model.residual_attention_network import ResidualAttentionModel_92_32input_update
 
 def trans_test(data, label):
     im = data.astype(np.float32) / 255.
