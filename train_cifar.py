@@ -5,14 +5,15 @@
 # @Date  : 18-9-6
 
 
-from model.residual_attention_network import ResidualAttentionModel_92_32input_update
+from ResidualAttentionNetwork.model.residual_attention_network import ResidualAttentionModel_92_32input_update
 import mxnet as mx
 from mxnet import gluon, image, nd, autograd
 from mxnet.gluon import loss as gloss
 import numpy as np
 import datetime
 import os
-from lib.piston_util import format_time, inf_train_gen
+from piston_util import format_time, inf_train_gen
+import logging
 
 os.environ['MXNET_GLUON_REPO'] = 'https://apache-mxnet.s3.cn-north-1.amazonaws.com.cn/'
 
@@ -53,8 +54,15 @@ val_data = gluon.data.DataLoader(
     batch_size=batch_size)
 
 
-def test(test_net, ctx, test_loader, epoch, save_params=True):
-    print("Start testing iter %d." % epoch)
+def label_transform(label, classes):
+    ind = label.astype('int')
+    res = nd.zeros((ind.shape[0], classes), ctx=label.context)
+    res[nd.arange(ind.shape[0], ctx=label.context), ind] = 1
+    return res
+
+
+def test(test_net, ctx, test_loader, iteration, logger):
+    # print("Start testing iter %d." % iteration)
     Loss = gloss.SoftmaxCrossEntropyLoss()
     metric = mx.metric.Accuracy()
     test_loss = mx.metric.Loss()
@@ -68,19 +76,16 @@ def test(test_net, ctx, test_loader, epoch, save_params=True):
 
     _, test_acc = metric.get()
     _, test_loss = test_loss.get()
-    if save_params:
-        test_net.save_parameters('cifar_param/test_iter%d_%.5f.param' % (epoch, test_acc))
-    test_str = ("\033[35mtest_Loss: %f, test acc %f\033[0m" % (test_loss, test_acc))
-    print(test_str)
+    test_net.save_parameters('cifar_param/test_iter%d_%.5f.param' % (iteration, test_acc))
+    test_str = ("Test Loss: %f, Test acc %f." % (test_loss, test_acc))
+    logger.info(test_str)
 
 
-def train(train_net, iterations, lr, wd, ctx, lr_period: tuple, lr_decay, train_loader, test_loader, cat_interval):
-    net.collect_params().reset_ctx(ctx)
+def train(train_net, iterations, lr, wd, ctx, lr_period: tuple, lr_decay, train_loader, test_loader,
+          cat_interval, logger):
+    train_net.collect_params().reset_ctx(ctx)
     trainer = gluon.Trainer(train_net.collect_params(),
                             'sgd', {'learning_rate': lr, 'momentum': 0.9, 'wd': wd})
-
-    # trainer = gluon.Trainer(train_net.collect_params(),
-    #                         'rmsprop', {'learning_rate': lr, 'wd': wd})
 
     train_gen = inf_train_gen(train_loader)
     Loss = gloss.SoftmaxCrossEntropyLoss()
@@ -109,18 +114,92 @@ def train(train_net, iterations, lr, wd, ctx, lr_period: tuple, lr_decay, train_
             epoch_str = ("Iter %d. Loss: %.5f, Train acc %f."
                          % (iteration, epoch_loss, train_acc))
             prev_time = cur_time
-            print("\033[32m" + epoch_str + time_str + 'lr ' + str(trainer.learning_rate) + "\033[0m")
+            logger.info(epoch_str + time_str + 'lr ' + str(trainer.learning_rate))
             test(train_net, ctx, test_loader, iteration)
+        if iteration in lr_period:
+            trainer.set_learning_rate(trainer.learning_rate * lr_decay)
+
+
+def train_mixup(train_net, iterations, lr, wd, ctx, lr_period: tuple, lr_decay, train_loader, test_loader,
+                cat_interval, logger):
+    train_net.collect_params().reset_ctx(ctx)
+    trainer = gluon.Trainer(train_net.collect_params(),
+                            'sgd', {'learning_rate': lr, 'momentum': 0.9, 'wd': wd})
+
+    train_gen = inf_train_gen(train_loader)
+    Loss = gluon.loss.SoftmaxCrossEntropyLoss(sparse_label=False)
+    metric = mx.metric.RMSE()
+    train_loss = mx.metric.Loss()
+    prev_time = datetime.datetime.now()
+    alpha = 1
+    classes = 10
+
+    metric.reset()
+    train_loss.reset()
+    print("Start training with mixup.")
+    for iteration in range(int(iterations)):
+        lam = np.random.beta(alpha, alpha)
+        if iteration >= iterations * 0.8:
+            lam = 1
+
+        batch = next(train_gen)
+        data = batch[0].as_in_context(ctx)
+        label = batch[1].as_in_context(ctx)
+
+        # trans = [lam * X + (1 - lam) * X[::-1] for X in data]
+        trans = lam * data + (1 - lam) * data[::-1]
+        y1 = label_transform(label, classes)
+        y2 = label_transform(label[::-1], classes)
+        labels = lam * y1 + (1 - lam) * y2
+
+        # for Y in label:
+        #     y1 = label_transform(Y, classes)
+        #     y2 = label_transform(Y[::-1], classes)
+        #     label.append(lam * y1 + (1 - lam) * y2)
+
+        with autograd.record():
+            output = train_net(trans)
+            loss = Loss(output, labels)
+        loss.backward()
+        trainer.step(batch_size)
+        train_loss.update(0, loss)
+        output_softmax = nd.SoftmaxActivation(output)
+        metric.update(labels, output_softmax)
+        if iteration % cat_interval == cat_interval - 1:
+            cur_time = datetime.datetime.now()
+            time_str = format_time(prev_time, cur_time)
+            _, train_acc = metric.get()
+            _, epoch_loss = train_loss.get()
+            epoch_str = ("Iter %d. Loss: %.5f, Train RMSE %.5f."
+                         % (iteration, epoch_loss, train_acc))
+            prev_time = cur_time
+            logger.info(epoch_str + time_str + 'lr ' + str(trainer.learning_rate))
+            test(train_net, ctx, test_loader, iteration, logger)
         if iteration in lr_period:
             trainer.set_learning_rate(trainer.learning_rate * lr_decay)
 
 
 if __name__ == '__main__':
     ctx = mx.gpu(3)
+    # net = LB_ResidualAttentionModel_92_32input_update()
 
     net = ResidualAttentionModel_92_32input_update()
     net.hybridize()
     net.initialize(init=mx.init.MSRAPrelu(), ctx=ctx)
+
+    logging.basicConfig()
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+    log_file_path = 'Attention92_cifar10_train.log'
+    fh = logging.FileHandler(log_file_path)
+    logger.addHandler(fh)
+
     iterations = 240e3
-    train(train_net=net, iterations=iterations, lr=0.1, wd=1e-4, ctx=ctx, lr_period=(72e3, 144e3, 216e3), lr_decay=0.1,
-          train_loader=train_data, test_loader=val_data, cat_interval=1e3)
+    mix_up = True
+    if mix_up:
+        train_mixup(train_net=net, iterations=iterations, lr=0.1, wd=1e-4, ctx=ctx, lr_period=(72e3, 144e3, 216e3),
+                    lr_decay=0.1, train_loader=train_data, test_loader=val_data, cat_interval=1e3, logger=logger)
+    else:
+        train(train_net=net, iterations=iterations, lr=0.1, wd=1e-4, ctx=ctx, lr_period=(72e3, 144e3, 216e3),
+              lr_decay=0.1, train_loader=train_data, test_loader=val_data, cat_interval=1e3, logger=logger)
+
