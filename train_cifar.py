@@ -5,14 +5,14 @@
 # @Date  : 18-9-6
 
 
-from ResidualAttentionNetwork.model.residual_attention_network import ResidualAttentionModel_92_32input_update
+from model.residual_attention_network import ResidualAttentionModel_92_32input_update
 import mxnet as mx
 from mxnet import gluon, image, nd, autograd
 from mxnet.gluon import loss as gloss
 import numpy as np
 import datetime
 import os
-from piston_util import format_time, inf_train_gen
+from lib.piston_util import format_time, inf_train_gen
 import logging
 
 os.environ['MXNET_GLUON_REPO'] = 'https://apache-mxnet.s3.cn-north-1.amazonaws.com.cn/'
