@@ -5,7 +5,7 @@
 # @Date  : 18-9-6
 
 
-from model.residual_attention_network import ResidualAttentionModel_92_32input_update
+from model.residual_attention_network import ResidualAttentionModel_32input
 import mxnet as mx
 from mxnet import gluon, image, nd, autograd
 from mxnet.gluon import loss as gloss
@@ -183,7 +183,7 @@ if __name__ == '__main__':
     ctx = mx.gpu(3)
     # net = LB_ResidualAttentionModel_92_32input_update()
 
-    net = ResidualAttentionModel_92_32input_update()
+    net = ResidualAttentionModel_32input(additional_stage=True)
     net.hybridize()
     net.initialize(init=mx.init.MSRAPrelu(), ctx=ctx)
 

@@ -3,7 +3,7 @@
 # @Contact : pistonyang@gmail.com
 # @Date  : 18-9-27
 
-from model.residual_attention_network import ResidualAttentionModel_56
+from model.residual_attention_network import ResidualAttentionModel
 from mxnet.gluon.data.vision import ImageFolderDataset
 import mxnet as mx
 from mxnet import gluon, image, nd, autograd
@@ -137,7 +137,7 @@ if __name__ == '__main__':
     num_gpus = 2
     ctx = [mx.gpu(i) for i in range(num_gpus)]
 
-    net = ResidualAttentionModel_56()
+    net = ResidualAttentionModel()
     net.hybridize(static_alloc=True)
     net.initialize(init=mx.init.MSRAPrelu(), ctx=ctx)
 
