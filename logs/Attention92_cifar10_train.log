@@ -1,0 +1,342 @@
+Iter 999. Loss: 1.52939, Train acc 0.446484.Time 00:04:13.lr 0.1
+Test Loss: 1.133460, Test acc 0.597000.
+Iter 1999. Loss: 1.20553, Train acc 0.567133.Time 00:04:27.lr 0.1
+Test Loss: 0.776448, Test acc 0.730100.
+Iter 2999. Loss: 1.02042, Train acc 0.636292.Time 00:04:25.lr 0.1
+Test Loss: 0.661102, Test acc 0.775000.
+Iter 3999. Loss: 0.89929, Train acc 0.680668.Time 00:04:26.lr 0.1
+Test Loss: 0.721281, Test acc 0.769600.
+Iter 4999. Loss: 0.81325, Train acc 0.711991.Time 00:04:26.lr 0.1
+Test Loss: 0.561205, Test acc 0.815700.
+Iter 5999. Loss: 0.74925, Train acc 0.735242.Time 00:04:55.lr 0.1
+Test Loss: 0.468108, Test acc 0.842300.
+Iter 6999. Loss: 0.69896, Train acc 0.753598.Time 00:04:41.lr 0.1
+Test Loss: 0.523844, Test acc 0.828500.
+Iter 7999. Loss: 0.65748, Train acc 0.768475.Time 00:04:38.lr 0.1
+Test Loss: 0.527866, Test acc 0.830200.
+Iter 8999. Loss: 0.62339, Train acc 0.780712.Time 00:04:39.lr 0.1
+Test Loss: 0.529099, Test acc 0.831600.
+Iter 9999. Loss: 0.59452, Train acc 0.791097.Time 00:04:39.lr 0.1
+Test Loss: 0.418365, Test acc 0.859800.
+Iter 10999. Loss: 0.57018, Train acc 0.799832.Time 00:04:38.lr 0.1
+Test Loss: 0.447689, Test acc 0.851600.
+Iter 11999. Loss: 0.54873, Train acc 0.807507.Time 00:04:39.lr 0.1
+Test Loss: 0.511544, Test acc 0.839100.
+Iter 12999. Loss: 0.53003, Train acc 0.814124.Time 00:04:37.lr 0.1
+Test Loss: 0.498736, Test acc 0.838600.
+Iter 13999. Loss: 0.51386, Train acc 0.819963.Time 00:04:34.lr 0.1
+Test Loss: 0.395840, Test acc 0.873700.
+Iter 14999. Loss: 0.49903, Train acc 0.825209.Time 00:04:36.lr 0.1
+Test Loss: 0.460575, Test acc 0.848400.
+Iter 15999. Loss: 0.48545, Train acc 0.830076.Time 00:04:35.lr 0.1
+Test Loss: 0.372533, Test acc 0.877300.
+Iter 16999. Loss: 0.47327, Train acc 0.834396.Time 00:04:33.lr 0.1
+Test Loss: 0.419467, Test acc 0.861300.
+Iter 17999. Loss: 0.46211, Train acc 0.838388.Time 00:04:32.lr 0.1
+Test Loss: 0.381412, Test acc 0.878200.
+Iter 18999. Loss: 0.45145, Train acc 0.842066.Time 00:04:33.lr 0.1
+Test Loss: 0.381869, Test acc 0.876800.
+Iter 19999. Loss: 0.44196, Train acc 0.845440.Time 00:04:31.lr 0.1
+Test Loss: 0.392764, Test acc 0.869300.
+Iter 20999. Loss: 0.43341, Train acc 0.848440.Time 00:04:29.lr 0.1
+Test Loss: 0.444115, Test acc 0.860200.
+Iter 21999. Loss: 0.42510, Train acc 0.851362.Time 00:04:29.lr 0.1
+Test Loss: 0.454315, Test acc 0.857700.
+Iter 22999. Loss: 0.41728, Train acc 0.854115.Time 00:04:28.lr 0.1
+Test Loss: 0.348116, Test acc 0.887200.
+Iter 23999. Loss: 0.41008, Train acc 0.856642.Time 00:04:27.lr 0.1
+Test Loss: 0.393344, Test acc 0.875500.
+Iter 24999. Loss: 0.40342, Train acc 0.859030.Time 00:04:26.lr 0.1
+Test Loss: 0.323421, Test acc 0.895900.
+Iter 25999. Loss: 0.39680, Train acc 0.861362.Time 00:04:27.lr 0.1
+Test Loss: 0.423478, Test acc 0.866100.
+Iter 26999. Loss: 0.39074, Train acc 0.863503.Time 00:04:26.lr 0.1
+Test Loss: 0.392764, Test acc 0.880400.
+Iter 27999. Loss: 0.38508, Train acc 0.865484.Time 00:04:29.lr 0.1
+Test Loss: 0.381859, Test acc 0.877900.
+Iter 28999. Loss: 0.37963, Train acc 0.867384.Time 00:04:26.lr 0.1
+Test Loss: 0.365170, Test acc 0.885300.
+Iter 29999. Loss: 0.37440, Train acc 0.869205.Time 00:04:26.lr 0.1
+Test Loss: 0.396256, Test acc 0.874200.
+Iter 30999. Loss: 0.36954, Train acc 0.870928.Time 00:04:27.lr 0.1
+Test Loss: 0.476767, Test acc 0.846700.
+Iter 31999. Loss: 0.36485, Train acc 0.872560.Time 00:04:25.lr 0.1
+Test Loss: 0.401308, Test acc 0.869400.
+Iter 32999. Loss: 0.36028, Train acc 0.874154.Time 00:04:27.lr 0.1
+Test Loss: 0.331865, Test acc 0.894800.
+Iter 33999. Loss: 0.35588, Train acc 0.875685.Time 00:04:25.lr 0.1
+Test Loss: 0.360458, Test acc 0.886500.
+Iter 34999. Loss: 0.35184, Train acc 0.877106.Time 00:04:25.lr 0.1
+Test Loss: 0.385518, Test acc 0.877500.
+Iter 35999. Loss: 0.34786, Train acc 0.878509.Time 00:04:25.lr 0.1
+Test Loss: 0.383770, Test acc 0.883300.
+Iter 36999. Loss: 0.34430, Train acc 0.879723.Time 00:04:25.lr 0.1
+Test Loss: 0.377363, Test acc 0.881000.
+Iter 37999. Loss: 0.34081, Train acc 0.880976.Time 00:04:24.lr 0.1
+Test Loss: 0.361206, Test acc 0.885700.
+Iter 38999. Loss: 0.33746, Train acc 0.882171.Time 00:04:22.lr 0.1
+Test Loss: 0.301443, Test acc 0.900600.
+Iter 39999. Loss: 0.33421, Train acc 0.883291.Time 00:04:24.lr 0.1
+Test Loss: 0.320198, Test acc 0.896900.
+Iter 40999. Loss: 0.33096, Train acc 0.884432.Time 00:04:22.lr 0.1
+Test Loss: 0.413982, Test acc 0.868300.
+Iter 41999. Loss: 0.32786, Train acc 0.885528.Time 00:04:23.lr 0.1
+Test Loss: 0.310211, Test acc 0.901800.
+Iter 42999. Loss: 0.32484, Train acc 0.886584.Time 00:04:24.lr 0.1
+Test Loss: 0.305597, Test acc 0.900800.
+Iter 43999. Loss: 0.32194, Train acc 0.887621.Time 00:04:25.lr 0.1
+Test Loss: 0.304897, Test acc 0.901000.
+Iter 44999. Loss: 0.31923, Train acc 0.888561.Time 00:04:24.lr 0.1
+Test Loss: 0.359616, Test acc 0.884400.
+Iter 45999. Loss: 0.31654, Train acc 0.889501.Time 00:04:23.lr 0.1
+Test Loss: 0.412817, Test acc 0.879100.
+Iter 46999. Loss: 0.31391, Train acc 0.890411.Time 00:04:23.lr 0.1
+Test Loss: 0.338277, Test acc 0.895400.
+Iter 47999. Loss: 0.31143, Train acc 0.891282.Time 00:04:23.lr 0.1
+Test Loss: 0.307595, Test acc 0.901300.
+Iter 48999. Loss: 0.30900, Train acc 0.892124.Time 00:04:30.lr 0.1
+Test Loss: 0.384385, Test acc 0.879100.
+Iter 49999. Loss: 0.30672, Train acc 0.892916.Time 00:04:52.lr 0.1
+Test Loss: 0.336584, Test acc 0.896400.
+Iter 50999. Loss: 0.30445, Train acc 0.893725.Time 00:04:13.lr 0.1
+Test Loss: 0.378283, Test acc 0.882400.
+Iter 51999. Loss: 0.30230, Train acc 0.894486.Time 00:04:18.lr 0.1
+Test Loss: 0.310451, Test acc 0.901600.
+Iter 52999. Loss: 0.30016, Train acc 0.895211.Time 00:04:17.lr 0.1
+Test Loss: 0.355060, Test acc 0.889200.
+Iter 53999. Loss: 0.29810, Train acc 0.895929.Time 00:04:19.lr 0.1
+Test Loss: 0.384492, Test acc 0.881300.
+Iter 54999. Loss: 0.29602, Train acc 0.896667.Time 00:04:18.lr 0.1
+Test Loss: 0.397645, Test acc 0.878900.
+Iter 55999. Loss: 0.29404, Train acc 0.897354.Time 00:04:17.lr 0.1
+Test Loss: 0.338895, Test acc 0.887400.
+Iter 56999. Loss: 0.29212, Train acc 0.898018.Time 00:04:17.lr 0.1
+Test Loss: 0.345993, Test acc 0.892500.
+Iter 57999. Loss: 0.29019, Train acc 0.898688.Time 00:04:19.lr 0.1
+Test Loss: 0.365248, Test acc 0.891500.
+Iter 58999. Loss: 0.28835, Train acc 0.899326.Time 00:04:17.lr 0.1
+Test Loss: 0.533620, Test acc 0.856600.
+Iter 59999. Loss: 0.28659, Train acc 0.899955.Time 00:04:16.lr 0.1
+Test Loss: 0.355248, Test acc 0.892100.
+Iter 60999. Loss: 0.28489, Train acc 0.900546.Time 00:04:17.lr 0.1
+Test Loss: 0.336463, Test acc 0.895900.
+Iter 61999. Loss: 0.28314, Train acc 0.901166.Time 00:04:16.lr 0.1
+Test Loss: 0.306296, Test acc 0.904200.
+Iter 62999. Loss: 0.28151, Train acc 0.901737.Time 00:04:15.lr 0.1
+Test Loss: 0.297195, Test acc 0.905800.
+Iter 63999. Loss: 0.27990, Train acc 0.902302.Time 00:04:14.lr 0.1
+Test Loss: 0.365883, Test acc 0.885600.
+Iter 64999. Loss: 0.27831, Train acc 0.902858.Time 00:04:14.lr 0.1
+Test Loss: 0.302609, Test acc 0.904400.
+Iter 65999. Loss: 0.27680, Train acc 0.903383.Time 00:04:12.lr 0.1
+Test Loss: 0.326682, Test acc 0.893900.
+Iter 66999. Loss: 0.27532, Train acc 0.903912.Time 00:04:12.lr 0.1
+Test Loss: 0.443476, Test acc 0.868900.
+Iter 67999. Loss: 0.27385, Train acc 0.904436.Time 00:04:13.lr 0.1
+Test Loss: 0.347839, Test acc 0.893400.
+Iter 68999. Loss: 0.27245, Train acc 0.904922.Time 00:04:12.lr 0.1
+Test Loss: 0.405258, Test acc 0.876000.
+Iter 69999. Loss: 0.27106, Train acc 0.905410.Time 00:04:12.lr 0.1
+Test Loss: 0.321785, Test acc 0.899600.
+Iter 70999. Loss: 0.26964, Train acc 0.905901.Time 00:04:14.lr 0.1
+Test Loss: 0.347643, Test acc 0.894700.
+Iter 71999. Loss: 0.26829, Train acc 0.906378.Time 00:04:21.lr 0.1
+Test Loss: 0.332971, Test acc 0.895800.
+Iter 72999. Loss: 0.26563, Train acc 0.907339.Time 00:04:13.lr 0.010000000000000002
+Test Loss: 0.177146, Test acc 0.944500.
+Iter 73999. Loss: 0.26261, Train acc 0.908413.Time 00:04:12.lr 0.010000000000000002
+Test Loss: 0.164881, Test acc 0.948800.
+Iter 74999. Loss: 0.25953, Train acc 0.909510.Time 00:04:12.lr 0.010000000000000002
+Test Loss: 0.169903, Test acc 0.948300.
+Iter 75999. Loss: 0.25646, Train acc 0.910598.Time 00:04:12.lr 0.010000000000000002
+Test Loss: 0.178334, Test acc 0.949100.
+Iter 76999. Loss: 0.25340, Train acc 0.911681.Time 00:04:12.lr 0.010000000000000002
+Test Loss: 0.177677, Test acc 0.948500.
+Iter 77999. Loss: 0.25040, Train acc 0.912738.Time 00:04:13.lr 0.010000000000000002
+Test Loss: 0.181919, Test acc 0.948900.
+Iter 78999. Loss: 0.24744, Train acc 0.913783.Time 00:04:13.lr 0.010000000000000002
+Test Loss: 0.184143, Test acc 0.949500.
+Iter 79999. Loss: 0.24453, Train acc 0.914811.Time 00:04:12.lr 0.010000000000000002
+Test Loss: 0.185935, Test acc 0.951200.
+Iter 80999. Loss: 0.24166, Train acc 0.915827.Time 00:04:11.lr 0.010000000000000002
+Test Loss: 0.188526, Test acc 0.950300.
+Iter 81999. Loss: 0.23885, Train acc 0.916818.Time 00:04:10.lr 0.010000000000000002
+Test Loss: 0.192063, Test acc 0.950000.
+Iter 82999. Loss: 0.23609, Train acc 0.917790.Time 00:04:10.lr 0.010000000000000002
+Test Loss: 0.190188, Test acc 0.952000.
+Iter 83999. Loss: 0.23340, Train acc 0.918737.Time 00:04:10.lr 0.010000000000000002
+Test Loss: 0.201896, Test acc 0.949100.
+Iter 84999. Loss: 0.23077, Train acc 0.919663.Time 00:04:09.lr 0.010000000000000002
+Test Loss: 0.188315, Test acc 0.952000.
+Iter 85999. Loss: 0.22818, Train acc 0.920576.Time 00:04:09.lr 0.010000000000000002
+Test Loss: 0.196501, Test acc 0.952200.
+Iter 86999. Loss: 0.22565, Train acc 0.921467.Time 00:04:09.lr 0.010000000000000002
+Test Loss: 0.196913, Test acc 0.951400.
+Iter 87999. Loss: 0.22317, Train acc 0.922338.Time 00:04:09.lr 0.010000000000000002
+Test Loss: 0.197040, Test acc 0.952900.
+Iter 88999. Loss: 0.22075, Train acc 0.923189.Time 00:04:09.lr 0.010000000000000002
+Test Loss: 0.198904, Test acc 0.950900.
+Iter 89999. Loss: 0.21837, Train acc 0.924025.Time 00:04:09.lr 0.010000000000000002
+Test Loss: 0.203115, Test acc 0.950800.
+Iter 90999. Loss: 0.21604, Train acc 0.924843.Time 00:04:09.lr 0.010000000000000002
+Test Loss: 0.207274, Test acc 0.951800.
+Iter 91999. Loss: 0.21376, Train acc 0.925647.Time 00:04:09.lr 0.010000000000000002
+Test Loss: 0.205080, Test acc 0.951200.
+Iter 92999. Loss: 0.21152, Train acc 0.926432.Time 00:04:10.lr 0.010000000000000002
+Test Loss: 0.210455, Test acc 0.949000.
+Iter 93999. Loss: 0.20933, Train acc 0.927205.Time 00:04:21.lr 0.010000000000000002
+Test Loss: 0.211720, Test acc 0.949600.
+Iter 94999. Loss: 0.20718, Train acc 0.927957.Time 00:04:13.lr 0.010000000000000002
+Test Loss: 0.202726, Test acc 0.949800.
+Iter 95999. Loss: 0.20508, Train acc 0.928696.Time 00:04:16.lr 0.010000000000000002
+Test Loss: 0.215505, Test acc 0.951900.
+Iter 96999. Loss: 0.20302, Train acc 0.929418.Time 00:04:19.lr 0.010000000000000002
+Test Loss: 0.216670, Test acc 0.948000.
+Iter 97999. Loss: 0.20100, Train acc 0.930128.Time 00:04:19.lr 0.010000000000000002
+Test Loss: 0.211375, Test acc 0.951700.
+Iter 98999. Loss: 0.19902, Train acc 0.930824.Time 00:04:18.lr 0.010000000000000002
+Test Loss: 0.214976, Test acc 0.950600.
+Iter 99999. Loss: 0.19708, Train acc 0.931503.Time 00:04:51.lr 0.010000000000000002
+Test Loss: 0.219767, Test acc 0.948500.
+Iter 100999. Loss: 0.19518, Train acc 0.932170.Time 00:04:19.lr 0.010000000000000002
+Test Loss: 0.213221, Test acc 0.952300.
+Iter 101999. Loss: 0.19332, Train acc 0.932822.Time 00:04:36.lr 0.010000000000000002
+Test Loss: 0.216538, Test acc 0.947200.
+Iter 102999. Loss: 0.19149, Train acc 0.933465.Time 00:06:01.lr 0.010000000000000002
+Test Loss: 0.216626, Test acc 0.949700.
+Iter 103999. Loss: 0.18970, Train acc 0.934096.Time 00:08:26.lr 0.010000000000000002
+Test Loss: 0.207510, Test acc 0.952500.
+Iter 104999. Loss: 0.18793, Train acc 0.934712.Time 00:12:04.lr 0.010000000000000002
+Test Loss: 0.223059, Test acc 0.950300.
+Iter 105999. Loss: 0.18620, Train acc 0.935320.Time 00:12:20.lr 0.010000000000000002
+Test Loss: 0.207615, Test acc 0.954600.
+Iter 106999. Loss: 0.18451, Train acc 0.935914.Time 00:15:04.lr 0.010000000000000002
+Test Loss: 0.215238, Test acc 0.952100.
+Iter 107999. Loss: 0.18285, Train acc 0.936494.Time 00:16:04.lr 0.010000000000000002
+Test Loss: 0.224206, Test acc 0.947900.
+Iter 108999. Loss: 0.18123, Train acc 0.937063.Time 00:16:12.lr 0.010000000000000002
+Test Loss: 0.218367, Test acc 0.949500.
+Iter 109999. Loss: 0.17963, Train acc 0.937624.Time 00:16:15.lr 0.010000000000000002
+Test Loss: 0.213742, Test acc 0.951300.
+Iter 110999. Loss: 0.17806, Train acc 0.938174.Time 00:15:37.lr 0.010000000000000002
+Test Loss: 0.214311, Test acc 0.952000.
+Iter 111999. Loss: 0.17652, Train acc 0.938712.Time 00:15:46.lr 0.010000000000000002
+Test Loss: 0.221570, Test acc 0.948600.
+Iter 112999. Loss: 0.17501, Train acc 0.939242.Time 00:15:42.lr 0.010000000000000002
+Test Loss: 0.220552, Test acc 0.947500.
+Iter 113999. Loss: 0.17353, Train acc 0.939762.Time 00:15:49.lr 0.010000000000000002
+Test Loss: 0.215280, Test acc 0.950300.
+Iter 114999. Loss: 0.17207, Train acc 0.940273.Time 00:15:51.lr 0.010000000000000002
+Test Loss: 0.220892, Test acc 0.946700.
+Iter 115999. Loss: 0.17064, Train acc 0.940775.Time 00:15:49.lr 0.010000000000000002
+Test Loss: 0.219823, Test acc 0.948400.
+Iter 116999. Loss: 0.16923, Train acc 0.941270.Time 00:15:22.lr 0.010000000000000002
+Test Loss: 0.224889, Test acc 0.948200.
+Iter 117999. Loss: 0.16785, Train acc 0.941753.Time 00:15:45.lr 0.010000000000000002
+Test Loss: 0.234116, Test acc 0.947300.
+Iter 118999. Loss: 0.16649, Train acc 0.942229.Time 00:15:47.lr 0.010000000000000002
+Test Loss: 0.221331, Test acc 0.948000.
+Iter 119999. Loss: 0.16516, Train acc 0.942695.Time 00:15:33.lr 0.010000000000000002
+Test Loss: 0.226135, Test acc 0.948500.
+Iter 120999. Loss: 0.16385, Train acc 0.943156.Time 00:15:23.lr 0.010000000000000002
+Test Loss: 0.230029, Test acc 0.948600.
+Iter 121999. Loss: 0.16257, Train acc 0.943604.Time 00:16:13.lr 0.010000000000000002
+Test Loss: 0.215501, Test acc 0.947900.
+Iter 122999. Loss: 0.16131, Train acc 0.944046.Time 00:16:00.lr 0.010000000000000002
+Test Loss: 0.206798, Test acc 0.950800.
+Iter 123999. Loss: 0.16005, Train acc 0.944486.Time 00:14:50.lr 0.010000000000000002
+Test Loss: 0.212467, Test acc 0.950700.
+Iter 124999. Loss: 0.15882, Train acc 0.944919.Time 00:15:17.lr 0.010000000000000002
+Test Loss: 0.222669, Test acc 0.948200.
+Iter 125999. Loss: 0.15763, Train acc 0.945338.Time 00:15:41.lr 0.010000000000000002
+Test Loss: 0.218266, Test acc 0.947600.
+Iter 126999. Loss: 0.15646, Train acc 0.945748.Time 00:15:54.lr 0.010000000000000002
+Test Loss: 0.236281, Test acc 0.942700.
+Iter 127999. Loss: 0.15531, Train acc 0.946149.Time 00:15:37.lr 0.010000000000000002
+Test Loss: 0.216136, Test acc 0.945500.
+Iter 128999. Loss: 0.15418, Train acc 0.946545.Time 00:15:48.lr 0.010000000000000002
+Test Loss: 0.211453, Test acc 0.949100.
+Iter 129999. Loss: 0.15307, Train acc 0.946936.Time 00:15:44.lr 0.010000000000000002
+Test Loss: 0.231163, Test acc 0.943000.
+Iter 130999. Loss: 0.15197, Train acc 0.947322.Time 00:15:49.lr 0.010000000000000002
+Test Loss: 0.235298, Test acc 0.945700.
+Iter 131999. Loss: 0.15090, Train acc 0.947695.Time 00:15:48.lr 0.010000000000000002
+Test Loss: 0.222867, Test acc 0.946200.
+Iter 132999. Loss: 0.14985, Train acc 0.948063.Time 00:16:34.lr 0.010000000000000002
+Test Loss: 0.229603, Test acc 0.943300.
+Iter 133999. Loss: 0.14881, Train acc 0.948432.Time 00:16:22.lr 0.010000000000000002
+Test Loss: 0.252030, Test acc 0.939600.
+Iter 134999. Loss: 0.14780, Train acc 0.948783.Time 00:15:29.lr 0.010000000000000002
+Test Loss: 0.222211, Test acc 0.946800.
+Iter 135999. Loss: 0.14680, Train acc 0.949133.Time 00:15:20.lr 0.010000000000000002
+Test Loss: 0.233885, Test acc 0.945500.
+Iter 136999. Loss: 0.14582, Train acc 0.949479.Time 00:15:39.lr 0.010000000000000002
+Test Loss: 0.230930, Test acc 0.944800.
+Iter 137999. Loss: 0.14484, Train acc 0.949822.Time 00:15:53.lr 0.010000000000000002
+Test Loss: 0.241082, Test acc 0.942800.
+Iter 138999. Loss: 0.14390, Train acc 0.950151.Time 00:15:43.lr 0.010000000000000002
+Test Loss: 0.235257, Test acc 0.942900.
+Iter 139999. Loss: 0.14296, Train acc 0.950483.Time 00:16:05.lr 0.010000000000000002
+Test Loss: 0.216236, Test acc 0.949300.
+Iter 140999. Loss: 0.14203, Train acc 0.950808.Time 00:15:40.lr 0.010000000000000002
+Test Loss: 0.265876, Test acc 0.939500.
+Iter 141999. Loss: 0.14113, Train acc 0.951125.Time 00:15:38.lr 0.010000000000000002
+Test Loss: 0.235848, Test acc 0.943100.
+Iter 142999. Loss: 0.14023, Train acc 0.951440.Time 00:15:52.lr 0.010000000000000002
+Test Loss: 0.238729, Test acc 0.942500.
+Iter 143999. Loss: 0.13934, Train acc 0.951753.Time 00:15:27.lr 0.010000000000000002
+Test Loss: 0.232293, Test acc 0.944800.
+Iter 144999. Loss: 0.13842, Train acc 0.952076.Time 00:15:46.lr 0.0010000000000000002
+Test Loss: 0.208301, Test acc 0.952500.
+Iter 145999. Loss: 0.13750, Train acc 0.952397.Time 00:15:26.lr 0.0010000000000000002
+Test Loss: 0.206004, Test acc 0.953000.
+Iter 146999. Loss: 0.13658, Train acc 0.952717.Time 00:12:51.lr 0.0010000000000000002
+Test Loss: 0.202144, Test acc 0.953300.
+Iter 147999. Loss: 0.13568, Train acc 0.953034.Time 00:11:53.lr 0.0010000000000000002
+Test Loss: 0.202046, Test acc 0.953700.
+Iter 148999. Loss: 0.13478, Train acc 0.953346.Time 00:11:57.lr 0.0010000000000000002
+Test Loss: 0.200455, Test acc 0.954900.
+Iter 149999. Loss: 0.13390, Train acc 0.953654.Time 00:12:02.lr 0.0010000000000000002
+Test Loss: 0.203861, Test acc 0.954700.
+Iter 150999. Loss: 0.13303, Train acc 0.953959.Time 00:12:06.lr 0.0010000000000000002
+Test Loss: 0.203076, Test acc 0.954100.
+Iter 151999. Loss: 0.13216, Train acc 0.954260.Time 00:11:56.lr 0.0010000000000000002
+Test Loss: 0.204054, Test acc 0.955100.
+Iter 152999. Loss: 0.13131, Train acc 0.954558.Time 00:12:12.lr 0.0010000000000000002
+Test Loss: 0.201894, Test acc 0.955500.
+Iter 153999. Loss: 0.13047, Train acc 0.954851.Time 00:12:00.lr 0.0010000000000000002
+Test Loss: 0.203037, Test acc 0.955900.
+Iter 154999. Loss: 0.12964, Train acc 0.955141.Time 00:12:09.lr 0.0010000000000000002
+Test Loss: 0.203875, Test acc 0.954900.
+Iter 155999. Loss: 0.12881, Train acc 0.955428.Time 00:11:56.lr 0.0010000000000000002
+Test Loss: 0.202200, Test acc 0.955500.
+Iter 156999. Loss: 0.12800, Train acc 0.955711.Time 00:08:07.lr 0.0010000000000000002
+Test Loss: 0.201878, Test acc 0.956400.
+Iter 157999. Loss: 0.12720, Train acc 0.955991.Time 00:07:01.lr 0.0010000000000000002
+Test Loss: 0.202227, Test acc 0.955700.
+Iter 158999. Loss: 0.12641, Train acc 0.956267.Time 00:07:00.lr 0.0010000000000000002
+Test Loss: 0.203769, Test acc 0.955300.
+Iter 159999. Loss: 0.12562, Train acc 0.956540.Time 00:07:04.lr 0.0010000000000000002
+Test Loss: 0.202463, Test acc 0.955200.
+Iter 160999. Loss: 0.12485, Train acc 0.956809.Time 00:07:03.lr 0.0010000000000000002
+Test Loss: 0.202731, Test acc 0.955400.
+Iter 161999. Loss: 0.12409, Train acc 0.957076.Time 00:07:02.lr 0.0010000000000000002
+Test Loss: 0.204722, Test acc 0.955400.
+Iter 162999. Loss: 0.12333, Train acc 0.957338.Time 00:07:01.lr 0.0010000000000000002
+Test Loss: 0.205718, Test acc 0.955900.
+Iter 163999. Loss: 0.12259, Train acc 0.957597.Time 00:07:00.lr 0.0010000000000000002
+Test Loss: 0.203994, Test acc 0.955000.
+Iter 164999. Loss: 0.12185, Train acc 0.957853.Time 00:07:03.lr 0.0010000000000000002
+Test Loss: 0.204344, Test acc 0.955500.
+Iter 165999. Loss: 0.12113, Train acc 0.958106.Time 00:07:01.lr 0.0010000000000000002
+Test Loss: 0.204470, Test acc 0.955600.
+Iter 166999. Loss: 0.12041, Train acc 0.958356.Time 00:07:00.lr 0.0010000000000000002
+Test Loss: 0.205546, Test acc 0.955200.
+Iter 167999. Loss: 0.11970, Train acc 0.958603.Time 00:07:01.lr 0.0010000000000000002
+Test Loss: 0.207887, Test acc 0.954600.
+Iter 168999. Loss: 0.11900, Train acc 0.958847.Time 00:07:02.lr 0.0010000000000000002
+Test Loss: 0.205007, Test acc 0.954700.
+Iter 169999. Loss: 0.11830, Train acc 0.959088.Time 00:06:59.lr 0.0010000000000000002
+Test Loss: 0.205598, Test acc 0.955500.
+Iter 170999. Loss: 0.11762, Train acc 0.959327.Time 00:07:01.lr 0.0010000000000000002
+Test Loss: 0.211917, Test acc 0.955200.

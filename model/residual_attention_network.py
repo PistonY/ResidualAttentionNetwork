@@ -87,7 +87,7 @@ class ResidualAttentionModel(nn.HybridBlock):
         """
         input size 224
         :param classes: Output classes 
-        :param additional_stage: If False means Attention56, True means Attention92
+        :param additional_stage: If False means Attention56, True means Attention92.
         :param kwargs: 
         """
         self.additional_stage = additional_stage
