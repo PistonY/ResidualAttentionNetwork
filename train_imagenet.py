@@ -1,5 +1,5 @@
 # @File  : train_imagenet.py
-# @Author: P.Yang
+# @Author: X.Yang
 # @Contact : pistonyang@gmail.com
 # @Date  : 18-9-27
 

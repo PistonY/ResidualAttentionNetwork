@@ -18,7 +18,7 @@ Python3.6, Numpy, mxnet
 ## Results
 - [x] cifar-10: Acc-95.41(**Top-1 err 4.59**) with Attention-92(higher than paper top-1 err 4.99)
 - [x] cifar-10: Acc-95.68(**Top-1 err 4.32**) with Attention-92(use MSRAPrelu init)
-- [x] cifar-10: Acc-96.65(**Top-1 err 3.35**) with Attention-92(with mixup).
+- [x] cifar-10: Acc-96.98(**Top-1 err 3.02**) with Attention-92(with mixup).
 - [x] Network scale control: I add 'p,t,r,m' to control network scale.(Gluon-CV)
     - I add 'p,t,r,m.' control which origin paper proposed.Now you can use Attentnon 56/92/128/164/200/236/452 in Gluon-cv.But I
     won't update to this project.Because I can't train them and  if I add, the paprm I have trained won't use any more.
