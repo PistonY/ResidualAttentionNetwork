@@ -19,8 +19,8 @@ Python3.6, Numpy, mxnet
 ## Results
 - [x] cifar-10: Acc-95.41(**Top-1 err 4.59**) with Attention-92(higher than paper top-1 err 4.99)
 - [x] cifar-10: Acc-95.68(**Top-1 err 4.32**) with Attention-92(use MSRAPrelu init)
-- [x] cifar-10: Acc-97.00(**Top-1 err 3.00**) with Attention-92
-    - BS 256
+- [x] cifar-10: Acc-97.00(**Top-1 err 3.00**) with Attention-92, using [gluoncv-tricks](https://arxiv.org/pdf/1812.01187.pdf).
+    - BS 256,
     - +mixup,
     - +LR warmup,
     - +No bias decay.
