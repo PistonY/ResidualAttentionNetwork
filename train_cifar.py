@@ -10,19 +10,25 @@ import mxnet as mx
 from mxnet import gluon, image, nd, autograd
 from mxnet.gluon import loss as gloss
 import numpy as np
-import datetime
+import time
 import os
-from lib.piston_util import format_time, inf_train_gen
+from lib.piston_util import cutout
+from gluoncv.utils.lr_scheduler import LRSequential, LRScheduler
 import logging
 
 os.environ['MXNET_GLUON_REPO'] = 'https://apache-mxnet.s3.cn-north-1.amazonaws.com.cn/'
 
-batch_size = 64
+batch_size = 128
+train_samples = int(5e4)
+dtype = 'float32'
+assert dtype in ('float32', 'float16')
+random_eraser = cutout()
 
 
 def transformer(data, label):
     im = data.asnumpy()
     im = np.pad(im, pad_width=((4, 4), (4, 4), (0, 0)), mode='constant')
+    im = random_eraser(im)
     im = nd.array(im) / 255.
     auglist = image.CreateAugmenter(data_shape=(3, 32, 32), rand_crop=True, rand_mirror=True,
                                     mean=mx.nd.array([0.485, 0.456, 0.406]),
@@ -47,11 +53,11 @@ def trans_test(data, label):
 
 train_data = gluon.data.DataLoader(
     gluon.data.vision.CIFAR10(train=True, transform=transformer),
-    batch_size=batch_size, shuffle=True, last_batch='discard')
+    batch_size=batch_size, shuffle=True, num_workers=12, last_batch='discard')
 
 val_data = gluon.data.DataLoader(
     gluon.data.vision.CIFAR10(train=False, transform=trans_test),
-    batch_size=batch_size)
+    batch_size=batch_size, last_batch='keep')
 
 
 def label_transform(label, classes):
@@ -62,131 +68,100 @@ def label_transform(label, classes):
 
 
 def test(test_net, ctx, test_loader, iteration, logger):
-    # print("Start testing iter %d." % iteration)
     Loss = gloss.SoftmaxCrossEntropyLoss()
     metric = mx.metric.Accuracy()
     test_loss = mx.metric.Loss()
     for batch in test_loader:
-        trans = batch[0].as_in_context(ctx)
-        labels = batch[1].as_in_context(ctx)
-        output = test_net(trans)
-        loss = Loss(output, labels)
-        test_loss.update(0, loss)
-        metric.update(labels, output)
+        data = gluon.utils.split_and_load(batch[0], ctx_list=ctx, batch_axis=0)
+        label = gluon.utils.split_and_load(batch[1], ctx_list=ctx, batch_axis=0)
+        outputs = [test_net(X.astype(dtype, copy=False)) for X in data]
+        losses = [Loss(yhat, y.astype(dtype, copy=False)) for yhat, y in zip(outputs, label)]
+        test_loss.update(0, losses)
+        metric.update(label, outputs)
 
     _, test_acc = metric.get()
     _, test_loss = test_loss.get()
-    test_net.save_parameters('cifar_param/test_iter%d_%.5f.param' % (iteration, test_acc))
+    test_net.save_parameters('cifar_param/test_epoch%d_%.5f.param' % (iteration, test_acc))
     test_str = ("Test Loss: %f, Test acc %f." % (test_loss, test_acc))
     logger.info(test_str)
 
 
-def train(train_net, iterations, lr, wd, ctx, lr_period: tuple, lr_decay, train_loader, test_loader,
-          cat_interval, logger):
-    train_net.collect_params().reset_ctx(ctx)
-    trainer = gluon.Trainer(train_net.collect_params(),
-                            'sgd', {'learning_rate': lr, 'momentum': 0.9, 'wd': wd})
+def train(train_net, epochs, lr, wd, ctx, warmup_epochs, train_loader, test_loader, use_mixup, logger):
+    num_batches = train_samples // batch_size
+    lr_scheduler = LRSequential([
+        LRScheduler('linear', base_lr=0, target_lr=lr,
+                    nepochs=warmup_epochs, iters_per_epoch=num_batches),
+        LRScheduler('cosine', base_lr=lr, target_lr=0,
+                    nepochs=epochs - warmup_epochs,
+                    iters_per_epoch=num_batches)
+    ])
+    opt_params = {'learning_rate': lr, 'momentum': 0.9, 'wd': wd, 'lr_scheduler': lr_scheduler}
+    if dtype != 'float32':
+        opt_params['multi_precision'] = True
+    trainer = gluon.Trainer(train_net.collect_params(), 'nag', opt_params)
 
-    train_gen = inf_train_gen(train_loader)
-    Loss = gloss.SoftmaxCrossEntropyLoss()
-    metric = mx.metric.Accuracy()
-    train_loss = mx.metric.Loss()
-    prev_time = datetime.datetime.now()
-
-    metric.reset()
-    train_loss.reset()
-    for iteration in range(int(iterations)):
-        batch = next(train_gen)
-        trans = batch[0].as_in_context(ctx)
-        labels = batch[1].as_in_context(ctx)
-        with autograd.record():
-            output = train_net(trans)
-            loss = Loss(output, labels)
-        loss.backward()
-        trainer.step(batch_size)
-        train_loss.update(0, loss)
-        metric.update(labels, output)
-        if iteration % cat_interval == cat_interval - 1:
-            cur_time = datetime.datetime.now()
-            time_str = format_time(prev_time, cur_time)
-            _, train_acc = metric.get()
-            _, epoch_loss = train_loss.get()
-            epoch_str = ("Iter %d. Loss: %.5f, Train acc %f."
-                         % (iteration, epoch_loss, train_acc))
-            prev_time = cur_time
-            logger.info(epoch_str + time_str + 'lr ' + str(trainer.learning_rate))
-            test(train_net, ctx, test_loader, iteration)
-        if iteration in lr_period:
-            trainer.set_learning_rate(trainer.learning_rate * lr_decay)
-
-
-def train_mixup(train_net, iterations, lr, wd, ctx, lr_period: tuple, lr_decay, train_loader, test_loader,
-                cat_interval, logger):
-    train_net.collect_params().reset_ctx(ctx)
-    trainer = gluon.Trainer(train_net.collect_params(),
-                            'sgd', {'learning_rate': lr, 'momentum': 0.9, 'wd': wd})
-
-    train_gen = inf_train_gen(train_loader)
     Loss = gluon.loss.SoftmaxCrossEntropyLoss(sparse_label=False)
     metric = mx.metric.RMSE()
     train_loss = mx.metric.Loss()
-    prev_time = datetime.datetime.now()
     alpha = 1
     classes = 10
 
-    metric.reset()
-    train_loss.reset()
     print("Start training with mixup.")
-    for iteration in range(int(iterations)):
-        lam = np.random.beta(alpha, alpha)
-        if iteration >= iterations * 0.8:
-            lam = 1
+    for epoch in range(epochs):
+        metric.reset()
+        train_loss.reset()
+        st_time = time.time()
+        for i, batch in enumerate(train_loader):
+            lam = np.random.beta(alpha, alpha)
+            if epoch >= (epochs - 20) or not use_mixup:
+                lam = 1
 
-        batch = next(train_gen)
-        data = batch[0].as_in_context(ctx)
-        label = batch[1].as_in_context(ctx)
+            data = gluon.utils.split_and_load(batch[0], ctx_list=ctx, batch_axis=0)
+            label = gluon.utils.split_and_load(batch[1], ctx_list=ctx, batch_axis=0)
 
-        # trans = [lam * X + (1 - lam) * X[::-1] for X in data]
-        trans = lam * data + (1 - lam) * data[::-1]
-        y1 = label_transform(label, classes)
-        y2 = label_transform(label[::-1], classes)
-        labels = lam * y1 + (1 - lam) * y2
+            trans = [lam * X + (1 - lam) * X[::-1] for X in data]
+            labels = []
+            for Y in label:
+                y1 = label_transform(Y, classes)
+                y2 = label_transform(Y[::-1], classes)
+                labels.append(lam * y1 + (1 - lam) * y2)
 
-        # for Y in label:
-        #     y1 = label_transform(Y, classes)
-        #     y2 = label_transform(Y[::-1], classes)
-        #     label.append(lam * y1 + (1 - lam) * y2)
+            with autograd.record():
+                outputs = [train_net(X.astype(dtype, copy=False)) for X in trans]
+                losses = [Loss(yhat, y.astype(dtype, copy=False)) for yhat, y in zip(outputs, labels)]
+            for l in losses:
+                l.backward()
+            trainer.step(batch_size)
+            train_loss.update(0, losses)
+            metric.update(labels, outputs)
 
-        with autograd.record():
-            output = train_net(trans)
-            loss = Loss(output, labels)
-        loss.backward()
-        trainer.step(batch_size)
-        train_loss.update(0, loss)
-        output_softmax = nd.SoftmaxActivation(output)
-        metric.update(labels, output_softmax)
-        if iteration % cat_interval == cat_interval - 1:
-            cur_time = datetime.datetime.now()
-            time_str = format_time(prev_time, cur_time)
-            _, train_acc = metric.get()
-            _, epoch_loss = train_loss.get()
-            epoch_str = ("Iter %d. Loss: %.5f, Train RMSE %.5f."
-                         % (iteration, epoch_loss, train_acc))
-            prev_time = cur_time
-            logger.info(epoch_str + time_str + 'lr ' + str(trainer.learning_rate))
-            test(train_net, ctx, test_loader, iteration, logger)
-        if iteration in lr_period:
-            trainer.set_learning_rate(trainer.learning_rate * lr_decay)
+        cur_time = time.time() - st_time
+        eps_samples = int(train_samples // cur_time)
+        _, train_acc = metric.get()
+        _, epoch_loss = train_loss.get()
+        epoch_str = ("Epoch %d. Loss: %.5f, Train RMSE %.5f. %d samples/s. lr %.5f"
+                     % (epoch, epoch_loss, train_acc, eps_samples, trainer.learning_rate))
+        logger.info(epoch_str)
+        test(train_net, ctx, test_loader, epoch, logger)
 
 
 if __name__ == '__main__':
-    ctx = mx.gpu(3)
-    # net = LB_ResidualAttentionModel_92_32input_update()
+    from gluoncv.model_zoo.residual_attentionnet import cifar_residualattentionnet452
 
-    net = ResidualAttentionModel_32input(additional_stage=True)
-    net.hybridize()
+    ctx = [mx.gpu(i) for i in range(4)]
+    assert batch_size // len(ctx) == 0, "Pre batch on each GPU should be same."
+    mix_up = True
+    no_wd = True
+
+    # net = ResidualAttentionModel_32input(additional_stage=True)
+    net = cifar_residualattentionnet452()
+    net.hybridize(static_alloc=True, static_shape=True)
     net.initialize(init=mx.init.MSRAPrelu(), ctx=ctx)
-
+    if dtype != 'float32':
+        net.cast('float16')
+    if no_wd:
+        for k, v in net.collect_params('.*beta|.*gamma|.*bias').items():
+            v.wd_mult = 0.0
     logging.basicConfig()
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
@@ -194,12 +169,9 @@ if __name__ == '__main__':
     fh = logging.FileHandler(log_file_path)
     logger.addHandler(fh)
 
-    iterations = 240e3
-    mix_up = True
-    if mix_up:
-        train_mixup(train_net=net, iterations=iterations, lr=0.1, wd=1e-4, ctx=ctx, lr_period=(72e3, 144e3, 216e3),
-                    lr_decay=0.1, train_loader=train_data, test_loader=val_data, cat_interval=1e3, logger=logger)
-    else:
-        train(train_net=net, iterations=iterations, lr=0.1, wd=1e-4, ctx=ctx, lr_period=(72e3, 144e3, 216e3),
-              lr_decay=0.1, train_loader=train_data, test_loader=val_data, cat_interval=1e3, logger=logger)
+    epochs = 220
+    lr = 0.1 * (batch_size // 64)
+    wd = 1e-4
 
+    train(train_net=net, epochs=epochs, lr=lr, wd=wd, ctx=ctx, warmup_epochs=5,
+          train_loader=train_data, test_loader=val_data, use_mixup=mix_up, logger=logger)
