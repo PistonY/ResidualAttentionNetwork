@@ -880,3 +880,441 @@ Epoch 219. Loss: 0.03226, Train RMSE 0.03768. 1195 samples/s. lr 0.00000
 Test Loss: 0.120836, Test acc 0.971200.
 Epoch 0. Loss: 2.18251, Train RMSE 0.23716. 61 samples/s. lr 0.04002
 Test Loss: 1.801727, Test acc 0.360000.
+Epoch 1. Loss: 1.95384, Train RMSE 0.22657. 64 samples/s. lr 0.08004
+Test Loss: 1.789079, Test acc 0.435000.
+Epoch 2. Loss: 1.80991, Train RMSE 0.21332. 64 samples/s. lr 0.12006
+Test Loss: 1.243319, Test acc 0.567800.
+Epoch 3. Loss: 1.69272, Train RMSE 0.20051. 65 samples/s. lr 0.16008
+Test Loss: 1.219233, Test acc 0.581700.
+Epoch 4. Loss: 1.58787, Train RMSE 0.19277. 65 samples/s. lr 0.20000
+Test Loss: 1.003006, Test acc 0.661100.
+Epoch 5. Loss: 1.54257, Train RMSE 0.18597. 65 samples/s. lr 0.19999
+Test Loss: 0.911015, Test acc 0.696300.
+Epoch 6. Loss: 1.48123, Train RMSE 0.17925. 64 samples/s. lr 0.19996
+Test Loss: 0.751782, Test acc 0.752800.
+Epoch 7. Loss: 1.39685, Train RMSE 0.17399. 64 samples/s. lr 0.19990
+Test Loss: 0.769466, Test acc 0.767200.
+Epoch 8. Loss: 1.40344, Train RMSE 0.17012. 65 samples/s. lr 0.19983
+Test Loss: 0.855478, Test acc 0.764500.
+Epoch 9. Loss: 1.35467, Train RMSE 0.16762. 64 samples/s. lr 0.19973
+Test Loss: 0.660142, Test acc 0.807200.
+Epoch 10. Loss: 1.36656, Train RMSE 0.16344. 65 samples/s. lr 0.19962
+Test Loss: 0.643911, Test acc 0.822900.
+Epoch 11. Loss: 1.35926, Train RMSE 0.16224. 64 samples/s. lr 0.19948
+Test Loss: 0.603745, Test acc 0.834700.
+Epoch 12. Loss: 1.31743, Train RMSE 0.16125. 63 samples/s. lr 0.19932
+Test Loss: 0.564492, Test acc 0.819400.
+Epoch 13. Loss: 1.32520, Train RMSE 0.16013. 64 samples/s. lr 0.19914
+Test Loss: 0.640878, Test acc 0.835800.
+Epoch 14. Loss: 1.31367, Train RMSE 0.15794. 65 samples/s. lr 0.19893
+Test Loss: 0.621125, Test acc 0.837600.
+Epoch 15. Loss: 1.29783, Train RMSE 0.15660. 65 samples/s. lr 0.19871
+Test Loss: 0.694129, Test acc 0.816800.
+Epoch 16. Loss: 1.25033, Train RMSE 0.15399. 65 samples/s. lr 0.19847
+Test Loss: 0.508567, Test acc 0.850100.
+Epoch 17. Loss: 1.25206, Train RMSE 0.15226. 65 samples/s. lr 0.19820
+Test Loss: 0.553510, Test acc 0.832800.
+Epoch 18. Loss: 1.26361, Train RMSE 0.15132. 65 samples/s. lr 0.19791
+Test Loss: 0.564959, Test acc 0.836600.
+Epoch 19. Loss: 1.24047, Train RMSE 0.15123. 65 samples/s. lr 0.19761
+Test Loss: 0.586768, Test acc 0.833400.
+Epoch 20. Loss: 1.23061, Train RMSE 0.15092. 65 samples/s. lr 0.19728
+Test Loss: 0.570407, Test acc 0.856200.
+Epoch 21. Loss: 1.25664, Train RMSE 0.15010. 65 samples/s. lr 0.19693
+Test Loss: 0.568539, Test acc 0.846800.
+Epoch 22. Loss: 1.25909, Train RMSE 0.14940. 65 samples/s. lr 0.19656
+Test Loss: 0.560977, Test acc 0.852700.
+Epoch 23. Loss: 1.24043, Train RMSE 0.14758. 65 samples/s. lr 0.19617
+Test Loss: 0.484265, Test acc 0.861800.
+Epoch 24. Loss: 1.22357, Train RMSE 0.14836. 65 samples/s. lr 0.19576
+Test Loss: 0.554368, Test acc 0.864700.
+Epoch 25. Loss: 1.20522, Train RMSE 0.14618. 64 samples/s. lr 0.19533
+Test Loss: 0.527144, Test acc 0.877000.
+Epoch 26. Loss: 1.19995, Train RMSE 0.14543. 64 samples/s. lr 0.19488
+Test Loss: 0.508469, Test acc 0.873400.
+Epoch 27. Loss: 1.21432, Train RMSE 0.14498. 65 samples/s. lr 0.19441
+Test Loss: 0.483318, Test acc 0.861800.
+Epoch 28. Loss: 1.22409, Train RMSE 0.14483. 65 samples/s. lr 0.19391
+Test Loss: 0.494314, Test acc 0.871100.
+Epoch 29. Loss: 1.20371, Train RMSE 0.14497. 64 samples/s. lr 0.19340
+Test Loss: 0.577859, Test acc 0.855900.
+Epoch 30. Loss: 1.18552, Train RMSE 0.14366. 64 samples/s. lr 0.19287
+Test Loss: 0.505196, Test acc 0.872500.
+Epoch 31. Loss: 1.18476, Train RMSE 0.14331. 65 samples/s. lr 0.19232
+Test Loss: 0.417906, Test acc 0.883700.
+Epoch 32. Loss: 1.17008, Train RMSE 0.14123. 63 samples/s. lr 0.19175
+Test Loss: 0.491612, Test acc 0.885300.
+Epoch 33. Loss: 1.17625, Train RMSE 0.14124. 65 samples/s. lr 0.19116
+Test Loss: 0.465258, Test acc 0.881400.
+Epoch 34. Loss: 1.19672, Train RMSE 0.14160. 65 samples/s. lr 0.19054
+Test Loss: 0.526085, Test acc 0.866800.
+Epoch 35. Loss: 1.19175, Train RMSE 0.14083. 64 samples/s. lr 0.18991
+Test Loss: 0.454100, Test acc 0.890100.
+Epoch 36. Loss: 1.20384, Train RMSE 0.14114. 65 samples/s. lr 0.18927
+Test Loss: 0.497462, Test acc 0.879300.
+Epoch 37. Loss: 1.17774, Train RMSE 0.13974. 65 samples/s. lr 0.18860
+Test Loss: 0.459644, Test acc 0.890300.
+Epoch 38. Loss: 1.14849, Train RMSE 0.13899. 65 samples/s. lr 0.18791
+Test Loss: 0.454952, Test acc 0.890400.
+Epoch 39. Loss: 1.13507, Train RMSE 0.13772. 63 samples/s. lr 0.18720
+Test Loss: 0.382960, Test acc 0.908000.
+Epoch 40. Loss: 1.08994, Train RMSE 0.13707. 63 samples/s. lr 0.18648
+Test Loss: 0.430095, Test acc 0.886400.
+Epoch 41. Loss: 1.16148, Train RMSE 0.13806. 65 samples/s. lr 0.18574
+Test Loss: 0.472901, Test acc 0.876000.
+Epoch 42. Loss: 1.17916, Train RMSE 0.13927. 64 samples/s. lr 0.18498
+Test Loss: 0.527161, Test acc 0.868600.
+Epoch 43. Loss: 1.12459, Train RMSE 0.13564. 65 samples/s. lr 0.18420
+Test Loss: 0.444644, Test acc 0.901100.
+Epoch 44. Loss: 1.14370, Train RMSE 0.13636. 65 samples/s. lr 0.18340
+Test Loss: 0.453753, Test acc 0.896800.
+Epoch 45. Loss: 1.13597, Train RMSE 0.13574. 64 samples/s. lr 0.18258
+Test Loss: 0.460669, Test acc 0.901500.
+Epoch 46. Loss: 1.13338, Train RMSE 0.13464. 63 samples/s. lr 0.18175
+Test Loss: 0.453255, Test acc 0.900400.
+Epoch 47. Loss: 1.14273, Train RMSE 0.13492. 65 samples/s. lr 0.18090
+Test Loss: 0.401576, Test acc 0.906200.
+Epoch 48. Loss: 1.14634, Train RMSE 0.13555. 65 samples/s. lr 0.18003
+Test Loss: 0.414966, Test acc 0.902300.
+Epoch 49. Loss: 1.10881, Train RMSE 0.13448. 65 samples/s. lr 0.17915
+Test Loss: 0.376350, Test acc 0.910600.
+Epoch 50. Loss: 1.14510, Train RMSE 0.13496. 64 samples/s. lr 0.17825
+Test Loss: 0.502241, Test acc 0.897700.
+Epoch 51. Loss: 1.09956, Train RMSE 0.13227. 65 samples/s. lr 0.17733
+Test Loss: 0.455892, Test acc 0.889800.
+Epoch 52. Loss: 1.12339, Train RMSE 0.13343. 64 samples/s. lr 0.17639
+Test Loss: 0.415040, Test acc 0.910800.
+Epoch 53. Loss: 1.15710, Train RMSE 0.13492. 64 samples/s. lr 0.17544
+Test Loss: 0.398111, Test acc 0.915000.
+Epoch 54. Loss: 1.10881, Train RMSE 0.13262. 64 samples/s. lr 0.17448
+Test Loss: 0.489676, Test acc 0.911500.
+Epoch 55. Loss: 1.12411, Train RMSE 0.13276. 65 samples/s. lr 0.17349
+Test Loss: 0.485106, Test acc 0.908600.
+Epoch 56. Loss: 1.08816, Train RMSE 0.13065. 65 samples/s. lr 0.17249
+Test Loss: 0.476140, Test acc 0.894100.
+Epoch 57. Loss: 1.10518, Train RMSE 0.13171. 65 samples/s. lr 0.17148
+Test Loss: 0.355680, Test acc 0.917000.
+Epoch 58. Loss: 1.10604, Train RMSE 0.13185. 65 samples/s. lr 0.17045
+Test Loss: 0.474937, Test acc 0.911200.
+Epoch 59. Loss: 1.07681, Train RMSE 0.12929. 65 samples/s. lr 0.16941
+Test Loss: 0.372377, Test acc 0.915600.
+Epoch 60. Loss: 1.10860, Train RMSE 0.13058. 65 samples/s. lr 0.16835
+Test Loss: 0.410481, Test acc 0.916900.
+Epoch 61. Loss: 1.12862, Train RMSE 0.13174. 65 samples/s. lr 0.16727
+Test Loss: 0.457306, Test acc 0.896600.
+Epoch 62. Loss: 1.08724, Train RMSE 0.13000. 64 samples/s. lr 0.16619
+Test Loss: 0.386737, Test acc 0.906800.
+Epoch 63. Loss: 1.09721, Train RMSE 0.12955. 65 samples/s. lr 0.16508
+Test Loss: 0.404386, Test acc 0.910400.
+Epoch 64. Loss: 1.08423, Train RMSE 0.12956. 64 samples/s. lr 0.16397
+Test Loss: 0.360827, Test acc 0.910800.
+Epoch 65. Loss: 1.07865, Train RMSE 0.12880. 64 samples/s. lr 0.16284
+Test Loss: 0.450229, Test acc 0.906300.
+Epoch 66. Loss: 1.10112, Train RMSE 0.13000. 64 samples/s. lr 0.16169
+Test Loss: 0.407314, Test acc 0.899400.
+Epoch 67. Loss: 1.11864, Train RMSE 0.13016. 65 samples/s. lr 0.16054
+Test Loss: 0.405023, Test acc 0.923600.
+Epoch 68. Loss: 1.06195, Train RMSE 0.12713. 66 samples/s. lr 0.15937
+Test Loss: 0.346293, Test acc 0.923700.
+Epoch 69. Loss: 1.07414, Train RMSE 0.12818. 65 samples/s. lr 0.15818
+Test Loss: 0.348666, Test acc 0.916300.
+Epoch 70. Loss: 1.04475, Train RMSE 0.12607. 65 samples/s. lr 0.15699
+Test Loss: 0.364458, Test acc 0.925000.
+Epoch 71. Loss: 1.06012, Train RMSE 0.12630. 64 samples/s. lr 0.15578
+Test Loss: 0.326875, Test acc 0.919800.
+Epoch 72. Loss: 1.05148, Train RMSE 0.12653. 65 samples/s. lr 0.15456
+Test Loss: 0.378886, Test acc 0.925500.
+Epoch 73. Loss: 1.06553, Train RMSE 0.12597. 64 samples/s. lr 0.15333
+Test Loss: 0.388514, Test acc 0.921400.
+Epoch 74. Loss: 1.07222, Train RMSE 0.12596. 64 samples/s. lr 0.15209
+Test Loss: 0.353510, Test acc 0.913800.
+Epoch 75. Loss: 1.06431, Train RMSE 0.12571. 64 samples/s. lr 0.15084
+Test Loss: 0.327605, Test acc 0.928900.
+Epoch 76. Loss: 1.06178, Train RMSE 0.12618. 65 samples/s. lr 0.14958
+Test Loss: 0.461523, Test acc 0.911900.
+Epoch 77. Loss: 1.08044, Train RMSE 0.12650. 65 samples/s. lr 0.14830
+Test Loss: 0.342029, Test acc 0.923200.
+Epoch 78. Loss: 1.05411, Train RMSE 0.12482. 64 samples/s. lr 0.14702
+Test Loss: 0.366425, Test acc 0.927500.
+Epoch 79. Loss: 1.05595, Train RMSE 0.12441. 64 samples/s. lr 0.14572
+Test Loss: 0.350901, Test acc 0.921900.
+Epoch 80. Loss: 1.05242, Train RMSE 0.12360. 65 samples/s. lr 0.14442
+Test Loss: 0.336121, Test acc 0.920200.
+Epoch 81. Loss: 1.05984, Train RMSE 0.12534. 65 samples/s. lr 0.14310
+Test Loss: 0.316266, Test acc 0.926500.
+Epoch 82. Loss: 1.05409, Train RMSE 0.12390. 64 samples/s. lr 0.14178
+Test Loss: 0.303969, Test acc 0.935700.
+Epoch 83. Loss: 1.02519, Train RMSE 0.12363. 64 samples/s. lr 0.14045
+Test Loss: 0.370099, Test acc 0.926400.
+Epoch 84. Loss: 1.02183, Train RMSE 0.12155. 64 samples/s. lr 0.13911
+Test Loss: 0.296729, Test acc 0.932800.
+Epoch 85. Loss: 1.06931, Train RMSE 0.12373. 65 samples/s. lr 0.13776
+Test Loss: 0.318941, Test acc 0.928200.
+Epoch 86. Loss: 1.04609, Train RMSE 0.12257. 65 samples/s. lr 0.13640
+Test Loss: 0.370920, Test acc 0.922500.
+Epoch 87. Loss: 1.04855, Train RMSE 0.12345. 65 samples/s. lr 0.13504
+Test Loss: 0.437711, Test acc 0.921600.
+Epoch 88. Loss: 1.05062, Train RMSE 0.12313. 65 samples/s. lr 0.13367
+Test Loss: 0.441182, Test acc 0.913300.
+Epoch 89. Loss: 1.03903, Train RMSE 0.12271. 65 samples/s. lr 0.13229
+Test Loss: 0.348591, Test acc 0.930200.
+Epoch 90. Loss: 1.02207, Train RMSE 0.12028. 64 samples/s. lr 0.13090
+Test Loss: 0.321140, Test acc 0.929600.
+Epoch 91. Loss: 1.04211, Train RMSE 0.12177. 65 samples/s. lr 0.12951
+Test Loss: 0.366078, Test acc 0.920500.
+Epoch 92. Loss: 1.01670, Train RMSE 0.12023. 65 samples/s. lr 0.12811
+Test Loss: 0.354137, Test acc 0.928100.
+Epoch 93. Loss: 0.98718, Train RMSE 0.11737. 64 samples/s. lr 0.12670
+Test Loss: 0.329451, Test acc 0.931200.
+Epoch 94. Loss: 1.04362, Train RMSE 0.12098. 65 samples/s. lr 0.12529
+Test Loss: 0.361160, Test acc 0.929500.
+Epoch 95. Loss: 1.03786, Train RMSE 0.12144. 65 samples/s. lr 0.12388
+Test Loss: 0.330918, Test acc 0.930200.
+Epoch 96. Loss: 0.98445, Train RMSE 0.11902. 65 samples/s. lr 0.12245
+Test Loss: 0.336338, Test acc 0.930700.
+Epoch 97. Loss: 1.02324, Train RMSE 0.11973. 65 samples/s. lr 0.12103
+Test Loss: 0.328158, Test acc 0.932100.
+Epoch 98. Loss: 0.99665, Train RMSE 0.11807. 65 samples/s. lr 0.11960
+Test Loss: 0.442929, Test acc 0.926900.
+Epoch 99. Loss: 0.96807, Train RMSE 0.11718. 64 samples/s. lr 0.11816
+Test Loss: 0.377813, Test acc 0.934300.
+Epoch 100. Loss: 0.99889, Train RMSE 0.11706. 64 samples/s. lr 0.11672
+Test Loss: 0.319731, Test acc 0.932500.
+Epoch 101. Loss: 1.02136, Train RMSE 0.11830. 65 samples/s. lr 0.11528
+Test Loss: 0.356060, Test acc 0.932600.
+Epoch 102. Loss: 1.00521, Train RMSE 0.11810. 65 samples/s. lr 0.11384
+Test Loss: 0.313640, Test acc 0.934300.
+Epoch 103. Loss: 0.96786, Train RMSE 0.11485. 65 samples/s. lr 0.11239
+Test Loss: 0.315194, Test acc 0.934800.
+Epoch 104. Loss: 1.00388, Train RMSE 0.11667. 65 samples/s. lr 0.11094
+Test Loss: 0.358599, Test acc 0.935900.
+Epoch 105. Loss: 0.99739, Train RMSE 0.11731. 65 samples/s. lr 0.10948
+Test Loss: 0.426077, Test acc 0.927700.
+Epoch 106. Loss: 1.00043, Train RMSE 0.11795. 65 samples/s. lr 0.10803
+Test Loss: 0.270442, Test acc 0.938200.
+Epoch 107. Loss: 1.00369, Train RMSE 0.11745. 65 samples/s. lr 0.10657
+Test Loss: 0.356950, Test acc 0.934100.
+Epoch 108. Loss: 0.98315, Train RMSE 0.11529. 66 samples/s. lr 0.10511
+Test Loss: 0.269106, Test acc 0.942600.
+Epoch 109. Loss: 0.98650, Train RMSE 0.11619. 65 samples/s. lr 0.10365
+Test Loss: 0.358751, Test acc 0.935800.
+Epoch 110. Loss: 1.00360, Train RMSE 0.11557. 64 samples/s. lr 0.10219
+Test Loss: 0.307672, Test acc 0.939800.
+Epoch 111. Loss: 0.96003, Train RMSE 0.11347. 65 samples/s. lr 0.10073
+Test Loss: 0.321724, Test acc 0.942900.
+Epoch 112. Loss: 1.01615, Train RMSE 0.11784. 64 samples/s. lr 0.09927
+Test Loss: 0.385147, Test acc 0.933800.
+Epoch 113. Loss: 1.00280, Train RMSE 0.11566. 66 samples/s. lr 0.09781
+Test Loss: 0.305900, Test acc 0.941900.
+Epoch 114. Loss: 0.97093, Train RMSE 0.11358. 64 samples/s. lr 0.09635
+Test Loss: 0.384742, Test acc 0.940100.
+Epoch 115. Loss: 0.97348, Train RMSE 0.11233. 66 samples/s. lr 0.09489
+Test Loss: 0.338379, Test acc 0.941400.
+Epoch 116. Loss: 0.97515, Train RMSE 0.11276. 65 samples/s. lr 0.09343
+Test Loss: 0.372293, Test acc 0.942100.
+Epoch 117. Loss: 0.98313, Train RMSE 0.11305. 65 samples/s. lr 0.09197
+Test Loss: 0.356958, Test acc 0.943900.
+Epoch 118. Loss: 0.94141, Train RMSE 0.11079. 65 samples/s. lr 0.09051
+Test Loss: 0.307253, Test acc 0.936900.
+Epoch 119. Loss: 0.98955, Train RMSE 0.11358. 64 samples/s. lr 0.08906
+Test Loss: 0.404527, Test acc 0.939800.
+Epoch 120. Loss: 0.95432, Train RMSE 0.11067. 65 samples/s. lr 0.08761
+Test Loss: 0.326507, Test acc 0.935900.
+Epoch 121. Loss: 0.97197, Train RMSE 0.11184. 65 samples/s. lr 0.08616
+Test Loss: 0.409819, Test acc 0.937200.
+Epoch 122. Loss: 0.94737, Train RMSE 0.11028. 65 samples/s. lr 0.08472
+Test Loss: 0.334000, Test acc 0.936100.
+Epoch 123. Loss: 0.93796, Train RMSE 0.11019. 65 samples/s. lr 0.08327
+Test Loss: 0.333287, Test acc 0.941400.
+Epoch 124. Loss: 0.96042, Train RMSE 0.11066. 64 samples/s. lr 0.08183
+Test Loss: 0.367752, Test acc 0.939900.
+Epoch 125. Loss: 0.94177, Train RMSE 0.11039. 64 samples/s. lr 0.08040
+Test Loss: 0.415232, Test acc 0.942900.
+Epoch 126. Loss: 0.93352, Train RMSE 0.10879. 64 samples/s. lr 0.07897
+Test Loss: 0.325357, Test acc 0.938900.
+Epoch 127. Loss: 0.94765, Train RMSE 0.10985. 64 samples/s. lr 0.07754
+Test Loss: 0.254999, Test acc 0.947100.
+Epoch 128. Loss: 0.93313, Train RMSE 0.10822. 64 samples/s. lr 0.07612
+Test Loss: 0.281869, Test acc 0.947800.
+Epoch 129. Loss: 0.91935, Train RMSE 0.10678. 64 samples/s. lr 0.07470
+Test Loss: 0.327140, Test acc 0.939100.
+Epoch 130. Loss: 0.96799, Train RMSE 0.11002. 64 samples/s. lr 0.07329
+Test Loss: 0.317682, Test acc 0.950900.
+Epoch 131. Loss: 0.92254, Train RMSE 0.10708. 65 samples/s. lr 0.07189
+Test Loss: 0.359348, Test acc 0.944000.
+Epoch 132. Loss: 0.91687, Train RMSE 0.10620. 64 samples/s. lr 0.07049
+Test Loss: 0.313992, Test acc 0.942300.
+Epoch 133. Loss: 0.93008, Train RMSE 0.10702. 65 samples/s. lr 0.06910
+Test Loss: 0.306527, Test acc 0.946200.
+Epoch 134. Loss: 0.94200, Train RMSE 0.10795. 64 samples/s. lr 0.06771
+Test Loss: 0.340824, Test acc 0.943200.
+Epoch 135. Loss: 0.89351, Train RMSE 0.10391. 64 samples/s. lr 0.06633
+Test Loss: 0.350247, Test acc 0.946200.
+Epoch 136. Loss: 0.93558, Train RMSE 0.10648. 64 samples/s. lr 0.06496
+Test Loss: 0.307919, Test acc 0.947000.
+Epoch 137. Loss: 0.89029, Train RMSE 0.10303. 64 samples/s. lr 0.06359
+Test Loss: 0.306070, Test acc 0.952800.
+Epoch 138. Loss: 0.92952, Train RMSE 0.10471. 64 samples/s. lr 0.06224
+Test Loss: 0.368586, Test acc 0.945600.
+Epoch 139. Loss: 0.90612, Train RMSE 0.10469. 65 samples/s. lr 0.06089
+Test Loss: 0.330626, Test acc 0.948100.
+Epoch 140. Loss: 0.91810, Train RMSE 0.10421. 65 samples/s. lr 0.05955
+Test Loss: 0.326764, Test acc 0.952700.
+Epoch 141. Loss: 0.90353, Train RMSE 0.10351. 66 samples/s. lr 0.05821
+Test Loss: 0.359397, Test acc 0.951000.
+Epoch 142. Loss: 0.90400, Train RMSE 0.10364. 65 samples/s. lr 0.05689
+Test Loss: 0.278363, Test acc 0.947600.
+Epoch 143. Loss: 0.89061, Train RMSE 0.10168. 65 samples/s. lr 0.05558
+Test Loss: 0.295732, Test acc 0.950600.
+Epoch 144. Loss: 0.89602, Train RMSE 0.10236. 66 samples/s. lr 0.05427
+Test Loss: 0.393498, Test acc 0.945400.
+Epoch 145. Loss: 0.87266, Train RMSE 0.09989. 66 samples/s. lr 0.05298
+Test Loss: 0.288892, Test acc 0.955000.
+Epoch 146. Loss: 0.89822, Train RMSE 0.10157. 66 samples/s. lr 0.05169
+Test Loss: 0.326323, Test acc 0.949400.
+Epoch 147. Loss: 0.88871, Train RMSE 0.10059. 65 samples/s. lr 0.05042
+Test Loss: 0.300762, Test acc 0.949600.
+Epoch 148. Loss: 0.88785, Train RMSE 0.10054. 65 samples/s. lr 0.04916
+Test Loss: 0.318073, Test acc 0.953100.
+Epoch 149. Loss: 0.89469, Train RMSE 0.10038. 64 samples/s. lr 0.04790
+Test Loss: 0.277648, Test acc 0.952900.
+Epoch 150. Loss: 0.91586, Train RMSE 0.10205. 64 samples/s. lr 0.04666
+Test Loss: 0.294004, Test acc 0.952600.
+Epoch 151. Loss: 0.88580, Train RMSE 0.09946. 65 samples/s. lr 0.04543
+Test Loss: 0.359581, Test acc 0.954100.
+Epoch 152. Loss: 0.87814, Train RMSE 0.09941. 65 samples/s. lr 0.04421
+Test Loss: 0.357158, Test acc 0.951900.
+Epoch 153. Loss: 0.88245, Train RMSE 0.09873. 66 samples/s. lr 0.04301
+Test Loss: 0.339475, Test acc 0.954900.
+Epoch 154. Loss: 0.86382, Train RMSE 0.09645. 65 samples/s. lr 0.04181
+Test Loss: 0.271814, Test acc 0.959000.
+Epoch 155. Loss: 0.91591, Train RMSE 0.10108. 65 samples/s. lr 0.04063
+Test Loss: 0.309920, Test acc 0.958000.
+Epoch 156. Loss: 0.85517, Train RMSE 0.09626. 66 samples/s. lr 0.03946
+Test Loss: 0.381607, Test acc 0.949000.
+Epoch 157. Loss: 0.89782, Train RMSE 0.09915. 65 samples/s. lr 0.03830
+Test Loss: 0.210642, Test acc 0.961200.
+Epoch 158. Loss: 0.86613, Train RMSE 0.09524. 65 samples/s. lr 0.03716
+Test Loss: 0.371529, Test acc 0.954100.
+Epoch 159. Loss: 0.84939, Train RMSE 0.09387. 64 samples/s. lr 0.03603
+Test Loss: 0.301821, Test acc 0.955400.
+Epoch 160. Loss: 0.84883, Train RMSE 0.09389. 64 samples/s. lr 0.03491
+Test Loss: 0.313499, Test acc 0.960100.
+Epoch 161. Loss: 0.84759, Train RMSE 0.09351. 65 samples/s. lr 0.03381
+Test Loss: 0.224886, Test acc 0.958800.
+Epoch 162. Loss: 0.83829, Train RMSE 0.09368. 65 samples/s. lr 0.03272
+Test Loss: 0.275640, Test acc 0.961800.
+Epoch 163. Loss: 0.81905, Train RMSE 0.09162. 65 samples/s. lr 0.03165
+Test Loss: 0.361984, Test acc 0.955400.
+Epoch 164. Loss: 0.81971, Train RMSE 0.09112. 65 samples/s. lr 0.03059
+Test Loss: 0.269490, Test acc 0.959000.
+Epoch 165. Loss: 0.84034, Train RMSE 0.09268. 66 samples/s. lr 0.02955
+Test Loss: 0.283052, Test acc 0.962400.
+Epoch 166. Loss: 0.83440, Train RMSE 0.09181. 66 samples/s. lr 0.02852
+Test Loss: 0.262957, Test acc 0.961300.
+Epoch 167. Loss: 0.83655, Train RMSE 0.09200. 65 samples/s. lr 0.02750
+Test Loss: 0.285624, Test acc 0.961000.
+Epoch 168. Loss: 0.80343, Train RMSE 0.08877. 64 samples/s. lr 0.02650
+Test Loss: 0.288444, Test acc 0.961400.
+Epoch 169. Loss: 0.82409, Train RMSE 0.08978. 66 samples/s. lr 0.02552
+Test Loss: 0.284459, Test acc 0.964200.
+Epoch 170. Loss: 0.81194, Train RMSE 0.08818. 66 samples/s. lr 0.02455
+Test Loss: 0.333192, Test acc 0.960100.
+Epoch 171. Loss: 0.80963, Train RMSE 0.08861. 64 samples/s. lr 0.02360
+Test Loss: 0.309051, Test acc 0.955700.
+Epoch 172. Loss: 0.79073, Train RMSE 0.08759. 65 samples/s. lr 0.02267
+Test Loss: 0.290864, Test acc 0.962900.
+Epoch 173. Loss: 0.81810, Train RMSE 0.08961. 65 samples/s. lr 0.02175
+Test Loss: 0.252291, Test acc 0.966900.
+Epoch 174. Loss: 0.78615, Train RMSE 0.08600. 65 samples/s. lr 0.02085
+Test Loss: 0.308268, Test acc 0.964600.
+Epoch 175. Loss: 0.79122, Train RMSE 0.08666. 65 samples/s. lr 0.01996
+Test Loss: 0.392683, Test acc 0.962400.
+Epoch 176. Loss: 0.76857, Train RMSE 0.08335. 65 samples/s. lr 0.01910
+Test Loss: 0.292577, Test acc 0.962900.
+Epoch 177. Loss: 0.79620, Train RMSE 0.08507. 65 samples/s. lr 0.01825
+Test Loss: 0.300229, Test acc 0.965200.
+Epoch 178. Loss: 0.80212, Train RMSE 0.08606. 65 samples/s. lr 0.01741
+Test Loss: 0.292562, Test acc 0.965400.
+Epoch 179. Loss: 0.78446, Train RMSE 0.08287. 65 samples/s. lr 0.01660
+Test Loss: 0.292483, Test acc 0.963800.
+Epoch 180. Loss: 0.78890, Train RMSE 0.08427. 65 samples/s. lr 0.01580
+Test Loss: 0.329110, Test acc 0.962900.
+Epoch 181. Loss: 0.79040, Train RMSE 0.08438. 65 samples/s. lr 0.01502
+Test Loss: 0.331286, Test acc 0.966500.
+Epoch 182. Loss: 0.75490, Train RMSE 0.08067. 65 samples/s. lr 0.01426
+Test Loss: 0.213942, Test acc 0.964900.
+Epoch 183. Loss: 0.75394, Train RMSE 0.08104. 66 samples/s. lr 0.01352
+Test Loss: 0.207596, Test acc 0.965700.
+Epoch 184. Loss: 0.78423, Train RMSE 0.08328. 66 samples/s. lr 0.01279
+Test Loss: 0.286395, Test acc 0.965800.
+Epoch 185. Loss: 0.77142, Train RMSE 0.08199. 65 samples/s. lr 0.01209
+Test Loss: 0.181464, Test acc 0.967800.
+Epoch 186. Loss: 0.75332, Train RMSE 0.07918. 65 samples/s. lr 0.01140
+Test Loss: 0.264195, Test acc 0.969000.
+Epoch 187. Loss: 0.75724, Train RMSE 0.07951. 65 samples/s. lr 0.01073
+Test Loss: 0.250108, Test acc 0.969400.
+Epoch 188. Loss: 0.76127, Train RMSE 0.08003. 65 samples/s. lr 0.01008
+Test Loss: 0.287247, Test acc 0.968600.
+Epoch 189. Loss: 0.73660, Train RMSE 0.07756. 66 samples/s. lr 0.00945
+Test Loss: 0.199623, Test acc 0.967500.
+Epoch 190. Loss: 0.77286, Train RMSE 0.08002. 64 samples/s. lr 0.00884
+Test Loss: 0.274974, Test acc 0.968800.
+Epoch 191. Loss: 0.75117, Train RMSE 0.07841. 65 samples/s. lr 0.00825
+Test Loss: 0.260763, Test acc 0.968100.
+Epoch 192. Loss: 0.74028, Train RMSE 0.07778. 65 samples/s. lr 0.00768
+Test Loss: 0.282139, Test acc 0.966900.
+Epoch 193. Loss: 0.73309, Train RMSE 0.07640. 66 samples/s. lr 0.00713
+Test Loss: 0.289045, Test acc 0.969700.
+Epoch 194. Loss: 0.72625, Train RMSE 0.07598. 65 samples/s. lr 0.00660
+Test Loss: 0.200861, Test acc 0.969500.
+Epoch 195. Loss: 0.73772, Train RMSE 0.07656. 65 samples/s. lr 0.00609
+Test Loss: 0.279180, Test acc 0.968600.
+Epoch 196. Loss: 0.75567, Train RMSE 0.07771. 66 samples/s. lr 0.00559
+Test Loss: 0.335215, Test acc 0.968200.
+Epoch 197. Loss: 0.72194, Train RMSE 0.07428. 65 samples/s. lr 0.00512
+Test Loss: 0.322975, Test acc 0.968700.
+Epoch 198. Loss: 0.73997, Train RMSE 0.07661. 65 samples/s. lr 0.00467
+Test Loss: 0.280044, Test acc 0.970100.
+Epoch 199. Loss: 0.73757, Train RMSE 0.07564. 65 samples/s. lr 0.00424
+Test Loss: 0.274724, Test acc 0.970600.
+Epoch 200. Loss: 0.03587, Train RMSE 0.03003. 66 samples/s. lr 0.00383
+Test Loss: 0.115982, Test acc 0.972100.
+Epoch 201. Loss: 0.03438, Train RMSE 0.02990. 65 samples/s. lr 0.00344
+Test Loss: 0.104340, Test acc 0.973600.
+Epoch 202. Loss: 0.03376, Train RMSE 0.02941. 64 samples/s. lr 0.00307
+Test Loss: 0.107258, Test acc 0.972900.
+Epoch 203. Loss: 0.03401, Train RMSE 0.03018. 65 samples/s. lr 0.00272
+Test Loss: 0.104717, Test acc 0.973900.
+Epoch 204. Loss: 0.03288, Train RMSE 0.02888. 64 samples/s. lr 0.00239
+Test Loss: 0.099939, Test acc 0.975100.
+Epoch 205. Loss: 0.03264, Train RMSE 0.02922. 66 samples/s. lr 0.00208
+Test Loss: 0.103766, Test acc 0.974300.
+Epoch 206. Loss: 0.03212, Train RMSE 0.02834. 65 samples/s. lr 0.00180
+Test Loss: 0.102051, Test acc 0.974900.
+Epoch 207. Loss: 0.03236, Train RMSE 0.02845. 65 samples/s. lr 0.00153
+Test Loss: 0.102983, Test acc 0.973900.
+Epoch 208. Loss: 0.02780, Train RMSE 0.02598. 65 samples/s. lr 0.00129
+Test Loss: 0.102905, Test acc 0.975100.
+Epoch 209. Loss: 0.02740, Train RMSE 0.02537. 65 samples/s. lr 0.00107
+Test Loss: 0.100342, Test acc 0.975100.
+Epoch 210. Loss: 0.02765, Train RMSE 0.02554. 65 samples/s. lr 0.00086
+Test Loss: 0.101361, Test acc 0.975300.
+Epoch 211. Loss: 0.02778, Train RMSE 0.02579. 65 samples/s. lr 0.00068
+Test Loss: 0.101605, Test acc 0.974800.
+Epoch 212. Loss: 0.02826, Train RMSE 0.02557. 65 samples/s. lr 0.00052
+Test Loss: 0.101206, Test acc 0.974800.
+Epoch 213. Loss: 0.02803, Train RMSE 0.02604. 66 samples/s. lr 0.00038
+Test Loss: 0.100501, Test acc 0.975600.
+Epoch 214. Loss: 0.02758, Train RMSE 0.02521. 66 samples/s. lr 0.00027
+Test Loss: 0.100892, Test acc 0.975600.
+Epoch 215. Loss: 0.02998, Train RMSE 0.02712. 65 samples/s. lr 0.00017
+Test Loss: 0.099692, Test acc 0.975700.
+Epoch 216. Loss: 0.02808, Train RMSE 0.02602. 66 samples/s. lr 0.00010
+Test Loss: 0.100569, Test acc 0.975000.
+Epoch 217. Loss: 0.02676, Train RMSE 0.02464. 64 samples/s. lr 0.00004
+Test Loss: 0.100389, Test acc 0.975300.
+Epoch 218. Loss: 0.02806, Train RMSE 0.02501. 65 samples/s. lr 0.00001
+Test Loss: 0.099781, Test acc 0.975500.
+Epoch 219. Loss: 0.02835, Train RMSE 0.02635. 65 samples/s. lr 0.00000
+Test Loss: 0.099966, Test acc 0.975700.
