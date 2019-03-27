@@ -3,15 +3,11 @@
 # @File  : lb_basic_layer.py
 # @Author: Piston Yang
 # @Date  : 18-9-5
-"""ok"""
 
 from mxnet.gluon import nn
 
 
 class ResidualBlock(nn.HybridBlock):
-    """
-    sad
-    """
     def __init__(self, channels, in_channels=None, stride=1):
         super(ResidualBlock, self).__init__()
         self.channels = channels

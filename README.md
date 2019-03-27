@@ -5,6 +5,8 @@ A Gluon implement of Residual Attention Network
 This code is refered to this project
 
 https://github.com/tengshaofeng/ResidualAttentionNetwork-pytorch
+## Cifar-10 Kaggle
+![4](kaggle/0.9778.png)
 
 ## [GluonCV](http://gluon-cv.mxnet.io)
 Project site: https://github.com/dmlc/gluon-cv
