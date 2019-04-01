@@ -57,3 +57,12 @@ def cutout(p=0.5, s_l=0.02, s_h=0.4, r_1=0.3, r_2=1 / 0.3, v_l=0, v_h=255, pixel
         return input_img
 
     return eraser
+
+
+if __name__ == '__main__':
+    from gluoncv.model_zoo import cifar_residualattentionnet92
+    from mxnet import nd
+
+    net = cifar_residualattentionnet92()
+    net.initialize()
+    net.summary(nd.random.randn(1, 3, 32, 32))
