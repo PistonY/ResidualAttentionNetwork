@@ -14,6 +14,20 @@ https://github.com/tengshaofeng/ResidualAttentionNetwork-pytorch
 Project site: https://github.com/dmlc/gluon-cv
 
 I have contribute this project to GluonCV.Now you can easily use pre-trained model in few days.
+
+Usage:
+```python
+from gluoncv.model_zoo.residual_attentionnet import *
+```
+Include which you can use:
+```python
+__all__ = ['ResidualAttentionModel', 'cifar_ResidualAttentionModel',
+           'residualattentionnet56', 'cifar_residualattentionnet56',
+           'residualattentionnet92', 'cifar_residualattentionnet92',
+           'residualattentionnet128', 'cifar_residualattentionnet452',
+           'residualattentionnet164', 'residualattentionnet200',
+           'residualattentionnet236', 'residualattentionnet452']
+```
 ## Prerequisites
 
 Python3.6, Numpy, mxnet
@@ -23,8 +37,15 @@ Python3.6, Numpy, mxnet
 ## Results
 - [x] cifar-10: Acc-95.41(**Top-1 err 4.59**) with Attention-92(higher than paper top-1 err 4.99)
 - [x] cifar-10: Acc-95.68(**Top-1 err 4.32**) with Attention-92(use MSRAPrelu init)
-- [x] cifar-10: Acc-97.14(**Top-1 err 3.00**) with Attention-92, using [gluoncv-tricks](https://arxiv.org/pdf/1812.01187.pdf).
+- [x] cifar-10: Acc-97.14(**Top-1 err 2.86**) with Attention-92, using [gluoncv-tricks](https://arxiv.org/pdf/1812.01187.pdf).
     - BS 256,
+    - +mixup,
+    - +LR warmup,
+    - +No bias decay.
+    - +Cosine decay.
+    - +Cutout
+- [x] cifar-10: Acc-97.57(**Top-1 err 2.43**) with Attention-452, using [gluoncv-tricks](https://arxiv.org/pdf/1812.01187.pdf).
+    - BS 128,
     - +mixup,
     - +LR warmup,
     - +No bias decay.
