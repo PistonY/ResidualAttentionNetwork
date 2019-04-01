@@ -1,7 +1,8 @@
 # Residual Attention Network 
 [![GitHub](https://img.shields.io/github/license/PistonY/ResidualAttentionNetwork.svg)](./LICENSE)
-[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 ![ToDo](http://progressed.io/bar/100?title=ToDo)
+![Status](https://img.shields.io/badge/status-%E8%90%8C-orange.svg)
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 A Gluon implement of Residual Attention Network
 
