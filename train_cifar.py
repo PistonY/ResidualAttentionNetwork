@@ -31,8 +31,8 @@ def transformer(data, label):
     im = random_eraser(im)
     im = nd.array(im) / 255.
     auglist = image.CreateAugmenter(data_shape=(3, 32, 32), rand_crop=True, rand_mirror=True,
-                                    mean=mx.nd.array([0.485, 0.456, 0.406]),
-                                    std=mx.nd.array([0.229, 0.224, 0.225]))
+                                    mean=mx.nd.array([0.4914, 0.4824, 0.4467]),
+                                    std=mx.nd.array([0.2471, 0.2435, 0.2616]))
     for aug in auglist:
         im = aug(im)
     im = nd.transpose(im, (2, 0, 1))
@@ -42,8 +42,8 @@ def transformer(data, label):
 def trans_test(data, label):
     im = data.astype(np.float32) / 255.
     auglist = image.CreateAugmenter(data_shape=(3, 32, 32),
-                                    mean=mx.nd.array([0.485, 0.456, 0.406]),
-                                    std=mx.nd.array([0.229, 0.224, 0.225]))
+                                    mean=mx.nd.array([0.4914, 0.4824, 0.4467]),
+                                    std=mx.nd.array([0.2471, 0.2435, 0.2616]))
     for aug in auglist:
         im = aug(im)
 
