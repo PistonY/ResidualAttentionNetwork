@@ -1,5 +1,0 @@
-language: python
-python:
-  - "3.6"
-sudo: required
-script: test_module/test_model.py
