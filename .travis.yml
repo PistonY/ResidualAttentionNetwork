@@ -1,5 +1,6 @@
 dist: xenial
 language: python
+python: "3.6"
 install: pip install -r CI_requirements.txt
 sudo: required
 script: test_module/test_model.py
