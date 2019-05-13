@@ -93,8 +93,8 @@ def train(train_net, iterations, trainer, ctx, lr_period: tuple, lr_decay, train
 
     for iteration in range(int(iterations)):
         batch = next(train_gen)
-        trans = gutils.split_and_load(batch[0], ctx)
-        labels = gutils.split_and_load(batch[1], ctx)
+        trans = gutils.split_and_load(batch.data[0], ctx)
+        labels = gutils.split_and_load(batch.label[0], ctx)
 
         with autograd.record():
             outputs = [train_net(tran) for tran in trans]
